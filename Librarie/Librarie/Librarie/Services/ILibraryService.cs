@@ -9,5 +9,8 @@ namespace Librarie.Services
     public interface ILibraryService
     {
         List<Book> getBooks();
+
+        List<Transaction> GetAllTransactions();
+        bool Borrow(string userId, int id);
     }
 }

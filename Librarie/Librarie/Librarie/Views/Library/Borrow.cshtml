@@ -1,0 +1,18 @@
+
+@using Librarie.Models.LibraryViewModels
+@model BorrowViewModel
+@{
+    ViewData["Title"] = "Borrow";
+}
+
+<h2>Borrow</h2>
+
+@if (Model.IsSuccessful)
+{
+    <p>Succes: @Model.BookName</p>
+}
+else
+{
+    <p>Error</p>
+}
+
