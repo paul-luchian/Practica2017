@@ -23,7 +23,15 @@
                 <td>@book.title</td>
                 <td>@book.author</td>
                 <td>
-                    @Html.ActionLink("Borrow", "Borrow",new { id=@book.id}, new {@class = "btn btn-primary"})
+                    @if (!book.IsBorrowed)
+                    {
+                        @Html.ActionLink("Borrow", "Borrow", new { id = @book.id }, new { @class = "btn btn-primary" })
+
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Return", "Return", new { id = @book.id }, new { @class = "btn btn-warning" })//id= nume parametru primit de actiunea return
+                    }
                 </td>
             </tr>
         }

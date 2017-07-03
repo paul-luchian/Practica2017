@@ -42,43 +42,52 @@ namespace Librarie.Services
             //return new EmptyResult
            
         }
+
+        public bool Return(int id, string userId)//metoda de return
+        {
+            //context entity frameork
+            var transaction = _context.Transactions.Single(t => t.Book.id == id && t.UserId == userId);
+            _context.Transactions.Remove(transaction);
+            return _context.SaveChanges() == 1;
+             
+        }
         /*
 public List<Book> getBooks()
 {
-   List<Book> books = new List<Book>();
+List<Book> books = new List<Book>();
 
-   SqlConnection dee = new SqlConnection();
+SqlConnection dee = new SqlConnection();
 
-  // dee.ConnectionString = ConfigurationManager.ConnectionStrings["Data Source =DESKTOP-TUEJL5H/SQLEXPRESS; Initial Catalog = Librarie; Integrated Security = True; MultipleActiveResultSets = True"].ToString();
-   dee.ConnectionString = "Data Source = DESKTOP-TUEJL5H\\SQLEXPRESS; Initial Catalog = Librarie; Integrated Security = True; MultipleActiveResultSets = True";
+// dee.ConnectionString = ConfigurationManager.ConnectionStrings["Data Source =DESKTOP-TUEJL5H/SQLEXPRESS; Initial Catalog = Librarie; Integrated Security = True; MultipleActiveResultSets = True"].ToString();
+dee.ConnectionString = "Data Source = DESKTOP-TUEJL5H\\SQLEXPRESS; Initial Catalog = Librarie; Integrated Security = True; MultipleActiveResultSets = True";
 
-   dee.Open();
-   SqlCommand cm = new SqlCommand();
-   cm.CommandText = "SELECT * FROM [BOOKS]";
+dee.Open();
+SqlCommand cm = new SqlCommand();
+cm.CommandText = "SELECT * FROM [BOOKS]";
 
-   cm.Connection = dee;
-   SqlDataReader rd = cm.ExecuteReader();
-   if(rd.HasRows)
-   {
-       while(rd.Read())
-       {
-           books.Add(new Book(Convert.ToInt32(rd[0]),rd[1].ToString(),rd[2].ToString()));
-       }
-   }
-   dee.Close();
+cm.Connection = dee;
+SqlDataReader rd = cm.ExecuteReader();
+if(rd.HasRows)
+{
+while(rd.Read())
+{
+  books.Add(new Book(Convert.ToInt32(rd[0]),rd[1].ToString(),rd[2].ToString()));
+}
+}
+dee.Close();
 
-   return books;
+return books;
 
-   //rd.Close();
+//rd.Close();
 
-   return new List<Book>()
-   {
-       new Book() { id = 1, title = "The Autumn Republic", author = "Brian McClellan"},
-       new Book() { id = 2, title = "Anna Karenina", author = "Lev Tolstoi"},
-       new Book() { id = 3, title = "Hamlet", author = "William Shakespeare"},
-       new Book() { id = 4, title = "Norse Mythology", author = "Neil Gaiman"},
-       new Book() { id = 5, title = "Caraval", author = "Stephanie Garber"}
-   };
+return new List<Book>()
+{
+new Book() { id = 1, title = "The Autumn Republic", author = "Brian McClellan"},
+new Book() { id = 2, title = "Anna Karenina", author = "Lev Tolstoi"},
+new Book() { id = 3, title = "Hamlet", author = "William Shakespeare"},
+new Book() { id = 4, title = "Norse Mythology", author = "Neil Gaiman"},
+new Book() { id = 5, title = "Caraval", author = "Stephanie Garber"}
+};
 
 }
 */

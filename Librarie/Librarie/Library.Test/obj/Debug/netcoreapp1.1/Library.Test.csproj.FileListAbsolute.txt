@@ -1,0 +1,14 @@
+C:\Users\Paul\Desktop\Librarie\Librarie\Library.Test\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Paul\Desktop\Librarie\Librarie\Library.Test\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Paul\Desktop\Librarie\Librarie\Library.Test\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Paul\Desktop\Librarie\Librarie\Library.Test\bin\Debug\netcoreapp1.1\Library.Test.deps.json
+C:\Users\Paul\Desktop\Librarie\Librarie\Library.Test\bin\Debug\netcoreapp1.1\Library.Test.runtimeconfig.json
+C:\Users\Paul\Desktop\Librarie\Librarie\Library.Test\bin\Debug\netcoreapp1.1\Library.Test.runtimeconfig.dev.json
+C:\Users\Paul\Desktop\Librarie\Librarie\Library.Test\bin\Debug\netcoreapp1.1\Library.Test.dll
+C:\Users\Paul\Desktop\Librarie\Librarie\Library.Test\bin\Debug\netcoreapp1.1\Library.Test.pdb
+C:\Users\Paul\Desktop\Librarie\Librarie\Library.Test\bin\Debug\netcoreapp1.1\Librarie.dll
+C:\Users\Paul\Desktop\Librarie\Librarie\Library.Test\bin\Debug\netcoreapp1.1\Librarie.pdb
+C:\Users\Paul\Desktop\Librarie\Librarie\Library.Test\obj\Debug\netcoreapp1.1\Library.Test.csprojResolveAssemblyReference.cache
+C:\Users\Paul\Desktop\Librarie\Librarie\Library.Test\obj\Debug\netcoreapp1.1\Library.Test.AssemblyInfo.cs
+C:\Users\Paul\Desktop\Librarie\Librarie\Library.Test\obj\Debug\netcoreapp1.1\Library.Test.dll
+C:\Users\Paul\Desktop\Librarie\Librarie\Library.Test\obj\Debug\netcoreapp1.1\Library.Test.pdb

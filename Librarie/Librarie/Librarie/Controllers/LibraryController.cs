@@ -28,7 +28,7 @@ namespace Librarie.Controllers
 
             var transactions = _libraryService.GetAllTransactions();
 
-            var model = new LibraryViewModel(books);
+            var model = new LibraryViewModel(books,transactions);
 
             model.informations.NumberOfBooks = model.books.Count;
             model.informations.Date = DateTime.Now;
@@ -47,6 +47,17 @@ namespace Librarie.Controllers
             };
             return View(borrowViewModel);
             
+        }
+        public IActionResult Return(int id)
+        {
+            var userId = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            bool isSuccessful = _libraryService.Return(id, userId);//metoda
+            var returnViewModel = new ReturnViewModels()
+            {
+                IsSuccessful = isSuccessful,
+                BookName = _libraryService.getBooks().Single(t => t.id == id)?.title
+            };
+            return View(returnViewModel);
         }
     }
 }

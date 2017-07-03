@@ -1,0 +1,21 @@
+
+@using Librarie.Models.LibraryViewModels
+@model ReturnViewModels
+@{
+    ViewData["Title"] = "Return";
+}
+
+<h2>Return</h2>
+
+@if (Model.IsSuccessful)
+{
+    <div class="alert alert-success" value="alert">Ati returnat cu succes cartea: @Model.BookName</div>
+    // <p>Succes: @Model.BookName</p>
+}
+else
+{
+    <div class="alert alert-danger" value="alert">A aparut o eroare</div>
+
+    //<p>Error</p>
+}
+

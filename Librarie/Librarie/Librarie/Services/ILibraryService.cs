@@ -12,5 +12,6 @@ namespace Librarie.Services
 
         List<Transaction> GetAllTransactions();
         bool Borrow(string userId, int id);
+        bool Return(int id, string userId);//a fost adaugat in interfata
     }
 }

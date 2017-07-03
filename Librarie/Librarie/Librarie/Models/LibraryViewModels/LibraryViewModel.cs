@@ -19,7 +19,7 @@ namespace Librarie.Models.LibraryViewModels
             books = new List<BookViewModel>();
         }
 
-        public LibraryViewModel(List<Book> books1)
+        public LibraryViewModel(List<Book> books1,IList<Transaction> transactions)
         {
             informations = new InformationsViewModel();
             books = new List<BookViewModel>();
@@ -29,7 +29,8 @@ namespace Librarie.Models.LibraryViewModels
                 {
                     id = book.id,
                     title = book.title,
-                    author = book.author
+                    author = book.author,
+                    IsBorrowed= transactions.Any(t => t.Book.id==book.id)
                 };
 
                 books.Add(bookViewModel);
